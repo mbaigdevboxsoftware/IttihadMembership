@@ -1,0 +1,6 @@
+@IttihadmembershipAPI_HostAddress = http://localhost:5109
+
+GET {{IttihadmembershipAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

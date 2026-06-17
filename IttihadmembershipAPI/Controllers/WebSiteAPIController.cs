@@ -1,0 +1,43 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using IttihadmembershipAPI.Business;
+using IttihadmembershipAPI.DTO_s;
+
+namespace IttihadmembershipAPI.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class WebSiteAPIController : ControllerBase
+    {
+        private readonly IWebsiteService _WebsiteService;
+        public WebSiteAPIController(IWebsiteService WebsiteService)
+        {
+            _WebsiteService = WebsiteService;
+        }
+        [HttpPost("Userlogin")]
+        public async Task<IActionResult> Login(
+       [FromBody] LoginRequestDTO request)
+        {
+            var result =
+                await _WebsiteService.UserAuthentication(request);
+
+            if (result == null)
+                return Unauthorized(new
+                {
+                    Message = "Invalid username or password"
+                });
+
+            return Ok(result);
+        }
+        [HttpPost("UserRegister")]
+
+        public async Task<IActionResult> Register(WebsiteDTO request)
+        {
+            if (request == null)
+                return BadRequest("Invalid request");
+
+            var result = await _WebsiteService.UserRegister(request);
+            return Ok(result);
+        }
+
+    }
+}

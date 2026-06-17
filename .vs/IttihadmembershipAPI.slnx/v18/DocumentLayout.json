@@ -1,0 +1,444 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\IttihadMembership\\IttihadmembershipAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\dto\u0027s\\authenticationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\dto\u0027s\\authenticationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\dataaccess\\authenticationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\dataaccess\\authenticationmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\business\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\business\\authenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\controllers\\authenticationapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\controllers\\authenticationapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\dataaccess\\usersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\dataaccess\\usersmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\business\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\business\\usersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\controllers\\usersapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\controllers\\usersapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\dto\u0027s\\usersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\dto\u0027s\\usersdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\business\\websiteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\business\\websiteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\controllers\\websiteapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\controllers\\websiteapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\dto\u0027s\\commondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\dto\u0027s\\commondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\dataaccess\\websitemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\dataaccess\\websitemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\business\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\business\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\dto\u0027s\\websitedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\dto\u0027s\\websitedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\dbconnection\\dbconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\dbconnection\\dbconnector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\ittihadmembershipapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\ittihadmembershipapi.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\libman.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\generichelper\\bcryption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\generichelper\\bcryption.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\generichelper\\customdatareadertogenericextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\generichelper\\customdatareadertogenericextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\ittihadmembershipapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\ittihadmembershipapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|d:\\ittihadmembership\\ittihadmembershipapi\\ittihadmembershipapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{38881CAA-53FB-EAFF-CBD4-BF2D777E1BA0}|IttihadmembershipAPI\\IttihadmembershipAPI.csproj|solutionrelative:ittihadmembershipapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "WebsiteModel.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DataAccess\\WebsiteModel.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\DataAccess\\WebsiteModel.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DataAccess\\WebsiteModel.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\DataAccess\\WebsiteModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T11:35:29.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsersAPIController.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Controllers\\UsersAPIController.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\Controllers\\UsersAPIController.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Controllers\\UsersAPIController.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\Controllers\\UsersAPIController.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswBUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T06:52:28.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UsersService.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Business\\UsersService.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\Business\\UsersService.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Business\\UsersService.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\Business\\UsersService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAADwvxYAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T06:54:10.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsersDTO.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DTO\u0027s\\UsersDTO.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\DTO\u0027s\\UsersDTO.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DTO\u0027s\\UsersDTO.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\DTO\u0027s\\UsersDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T08:48:10.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthenticationDTO.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DTO\u0027s\\AuthenticationDTO.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\DTO\u0027s\\AuthenticationDTO.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DTO\u0027s\\AuthenticationDTO.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\DTO\u0027s\\AuthenticationDTO.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAywCAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T09:44:08.021Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AuthenticationModel.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DataAccess\\AuthenticationModel.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\DataAccess\\AuthenticationModel.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DataAccess\\AuthenticationModel.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\DataAccess\\AuthenticationModel.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAiwCQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T09:46:12.871Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsersModel.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DataAccess\\UsersModel.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\DataAccess\\UsersModel.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DataAccess\\UsersModel.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\DataAccess\\UsersModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T06:54:24.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthenticationService.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Business\\AuthenticationService.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\Business\\AuthenticationService.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Business\\AuthenticationService.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\Business\\AuthenticationService.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAswCoAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-16T06:56:35.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AuthenticationAPIController.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Controllers\\AuthenticationAPIController.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\Controllers\\AuthenticationAPIController.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Controllers\\AuthenticationAPIController.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\Controllers\\AuthenticationAPIController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwvycAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T10:11:44.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WebsiteService.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Business\\WebsiteService.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\Business\\WebsiteService.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Business\\WebsiteService.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\Business\\WebsiteService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T11:33:29.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WebSiteAPIController.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Controllers\\WebSiteAPIController.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\Controllers\\WebSiteAPIController.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Controllers\\WebSiteAPIController.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\Controllers\\WebSiteAPIController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T11:31:36.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CommonDTO.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DTO\u0027s\\CommonDTO.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\DTO\u0027s\\CommonDTO.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DTO\u0027s\\CommonDTO.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\DTO\u0027s\\CommonDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T11:24:43.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Program.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\Program.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Program.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\Program.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAqwBYAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T11:27:01.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "JwtTokenService.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Business\\JwtTokenService.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\Business\\JwtTokenService.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Business\\JwtTokenService.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\Business\\JwtTokenService.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAqwCQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T10:49:15.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\appsettings.json",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\appsettings.json",
+              "RelativeToolTip": "IttihadmembershipAPI\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-12T09:33:12.332Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\Controllers\\WeatherForecastController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T11:27:14.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WebsiteDTO.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DTO\u0027s\\WebsiteDTO.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\DTO\u0027s\\WebsiteDTO.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DTO\u0027s\\WebsiteDTO.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\DTO\u0027s\\WebsiteDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA0AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-15T11:33:44.692Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DbConnector.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DbConnection\\DbConnector.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\DbConnection\\DbConnector.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\DbConnection\\DbConnector.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\DbConnection\\DbConnector.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAADwv3gAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T09:36:35.228Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IttihadmembershipAPI.csproj",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\IttihadmembershipAPI.csproj",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\IttihadmembershipAPI.csproj",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\IttihadmembershipAPI.csproj",
+              "RelativeToolTip": "IttihadmembershipAPI\\IttihadmembershipAPI.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-10T11:36:43.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "libman.json",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\libman.json",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\libman.json",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\libman.json",
+              "RelativeToolTip": "IttihadmembershipAPI\\libman.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-12T11:16:46.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BCryption.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\GenericHelper\\BCryption.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\GenericHelper\\BCryption.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\GenericHelper\\BCryption.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\GenericHelper\\BCryption.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAcwBUCAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T10:15:57.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CustomDataReaderToGenericExtension.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\GenericHelper\\CustomDataReaderToGenericExtension.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\GenericHelper\\CustomDataReaderToGenericExtension.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\GenericHelper\\CustomDataReaderToGenericExtension.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\GenericHelper\\CustomDataReaderToGenericExtension.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-12T10:07:59.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IttihadmembershipAPI",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\IttihadmembershipAPI.csproj",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\IttihadmembershipAPI.csproj",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\IttihadmembershipAPI.csproj",
+              "RelativeToolTip": "IttihadmembershipAPI\\IttihadmembershipAPI.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-10T11:28:57.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "WeatherForecast.cs",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\WeatherForecast.cs",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\WeatherForecast.cs",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\WeatherForecast.cs",
+              "RelativeToolTip": "IttihadmembershipAPI\\WeatherForecast.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-10T11:27:07.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "IttihadmembershipAPI\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\IttihadMembership\\IttihadmembershipAPI\\IttihadmembershipAPI\\Properties\\launchSettings.json",
+              "RelativeToolTip": "IttihadmembershipAPI\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-10T11:29:00.994Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
