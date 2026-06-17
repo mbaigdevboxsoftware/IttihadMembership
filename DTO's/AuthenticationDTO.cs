@@ -5,6 +5,7 @@ namespace IttihadmembershipAPI.DTO_s
     public class UserDTO
     {
         public int EmployeeId { get; set; }
+        public int UserId { get; set; }
 
         public string Username { get; set; } = string.Empty;
 
@@ -49,7 +50,7 @@ namespace IttihadmembershipAPI.DTO_s
     {
         public int Id { get; set; }
 
-        public int UserId { get; set; }
+        public int EmployeeId { get; set; }
 
         public string Token { get; set; }
 

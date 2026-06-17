@@ -65,7 +65,7 @@ namespace IttihadmembershipAPI.Business
             if (storedToken.ExpiryDate <= DateTime.UtcNow)
                 return null;
 
-            var user =_AuthenticationModel.GetUserById(storedToken.UserId);
+            var user =_AuthenticationModel.GetUserById(storedToken.EmployeeId);
 
             if (user == null)
                 return null;

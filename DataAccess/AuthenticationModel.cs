@@ -82,13 +82,13 @@ namespace IttihadmembershipAPI.DataAccess
                 };
             }
         }
-        public void SaveRefreshToken(int userId,string refreshToken,DateTime expiryDate)
+        public void SaveRefreshToken(int EmployeeId, string refreshToken,DateTime expiryDate)
         {
             try
             {
                 var parameters = new[]
                 {
-                    new SqlParameter("@UserId", userId),
+                    new SqlParameter("@EmployeeId", EmployeeId),
                     new SqlParameter("@Token", refreshToken),
                     new SqlParameter("@ExpiryDate", expiryDate)
                 };
@@ -132,17 +132,17 @@ namespace IttihadmembershipAPI.DataAccess
 
             DbConnector.ExecuteNonQuery("[Admin].[uspRevokeRefreshToken]", parameters);
         }
-        public UserDTO GetUserById(int userId)
+        public UserDTO GetUserById(int employeeId)
         {
             try
             {
                 var parameters = new[]
                 {
-                    new SqlParameter("@UserId", userId)
+                    new SqlParameter("@EmployeeId", employeeId)
                 };
 
                 using (var result =
-                    DbConnector.ExecuteReader("[Admin].[GetUsers]", parameters))
+                    DbConnector.ExecuteReader("[Admin].[uspGetUserById]", parameters))
                 {
                     var list =
                         CustomDataReaderToGenericExtension

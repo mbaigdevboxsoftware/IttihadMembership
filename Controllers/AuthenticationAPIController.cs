@@ -27,9 +27,24 @@ namespace IttihadmembershipAPI.Controllers
                 {
                     Message = "Invalid username or password"
                 });
+            // Set refresh token in HttpOnly cookie
+            Response.Cookies.Append("refreshToken", result.RefreshToken, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = false,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddDays(30)
+            });
 
-            return Ok(result);
+
+            // Return only access token to frontend
+            return Ok(new
+            {
+                accessToken = result.AccessToken,
+                expiresAt = result.ExpiresAt
+            });
         }
+
         [HttpPost("Register")]
         
         public async Task<IActionResult> Register(RegisterDTO request)
@@ -42,12 +57,25 @@ namespace IttihadmembershipAPI.Controllers
         }
 
         [HttpPost("refresh")]
-        public IActionResult Refresh([FromBody] RefreshTokenRequestDTO request)
+        public IActionResult Refresh()
         {
-            var result =_AuthenticationService.RefreshToken(request.RefreshToken);
+            var refreshToken = Request.Cookies["refreshToken"];
+
+            var result = _AuthenticationService.RefreshToken(refreshToken);
 
             if (result == null)
                 return Unauthorized();
+            // Replace old cookie with new refresh token
+            Response.Cookies.Append(
+                "refreshToken",
+                result.RefreshToken,
+                new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = false,
+                    SameSite = SameSiteMode.Strict,
+                    Expires = DateTime.UtcNow.AddDays(30)
+                });
 
             return Ok(result);
         }
