@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("IttihadmembershipAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4dec899dcf8e5b87e2a9a34be8f6518ef5680de6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2206716e6ed262f30ccae545a2207879fed3746")]
 [assembly: System.Reflection.AssemblyProductAttribute("IttihadmembershipAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("IttihadmembershipAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
