@@ -38,6 +38,13 @@ namespace IttihadmembershipAPI.Controllers
             var result = await _WebsiteService.UserRegister(request);
             return Ok(result);
         }
+        [HttpPost]
+        [Route("NewGetNationality")]
+        public IActionResult NewGetNationality([FromBody] NationalityDTO obj)
+        {
+            var result = _WebsiteService.GetNationality(obj);
+            return Ok(result);
+        }
 
     }
 }

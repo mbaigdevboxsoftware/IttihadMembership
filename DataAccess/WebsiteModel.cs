@@ -80,11 +80,29 @@ namespace IttihadmembershipAPI.DataAccess
                 };
             }
         }
+        public SqlDataReader GetNationality(NationalityDTO obj)
+        {
+            try
+            {
+                var parameter = new[]
+                {
+                    new SqlParameter("@Id",obj.Id),
+
+                };
+                return DbConnector.ExecuteReader("[Admin].[GetNationality]", parameter);
+            }
+            catch (Exception ex)
+            {
+
+                return null;
+            }
+        }
     }
     public interface IWebsiteModel
     {
         UserDTO UserAuthentication(string Username);
         CommonDTO UserRegister(WebsiteDTO request);
+        SqlDataReader GetNationality(NationalityDTO obj);
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using IttihadmembershipAPI.Business;
 using IttihadmembershipAPI.DTO_s;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 
@@ -44,7 +45,7 @@ namespace IttihadmembershipAPI.Controllers
                 expiresAt = result.ExpiresAt
             });
         }
-
+        [Authorize]
         [HttpPost("Register")]
         
         public async Task<IActionResult> Register(RegisterDTO request)

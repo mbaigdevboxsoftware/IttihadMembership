@@ -22,8 +22,9 @@ builder.Services.AddScoped<IJwtTokenService, JwtTokenService>();
 builder.Services.AddScoped<IUsersModel, UsersModel>();
 builder.Services.AddScoped<IUsersService, UsersService>();
 builder.Services.AddScoped<IWebsiteModel, WebsiteModel>();
-
 builder.Services.AddScoped<IWebsiteService, WebsiteService>();
+builder.Services.AddScoped<IMemberShipModel, MemberShipModel>();
+builder.Services.AddScoped<IMemberShipService, MemberShipService>();
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
@@ -57,6 +58,7 @@ builder.Services
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
+            ClockSkew = TimeSpan.Zero,
 
             ValidIssuer = builder.Configuration["Jwt:Issuer"],
             ValidAudience = builder.Configuration["Jwt:Audience"],
@@ -66,16 +68,20 @@ builder.Services
                     builder.Configuration["Jwt:Key"]!))
         };
     });
+const string AngularCorsPolicy = "AngularAdminPolicy";
+
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowAll", policy =>
+    options.AddPolicy(AngularCorsPolicy, policy =>
     {
-        policy
-            .AllowAnyOrigin()
-            .AllowAnyHeader()
-            .AllowAnyMethod();
+        policy.WithOrigins("http://localhost:4200") // Your explicit Angular URL
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials(); // Allows HttpOnly cookies to pass safely
     });
 });
+
+builder.Services.AddControllers();
 
 
 var app = builder.Build();
@@ -94,10 +100,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCors("AngularAdminPolicy");
 
 app.UseAuthentication(); // Must come before UseAuthorization
 app.UseAuthorization();
-app.UseCors("AllowAll");
+
 app.MapControllers();
 
 app.Run();
