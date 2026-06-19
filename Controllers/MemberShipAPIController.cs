@@ -25,7 +25,7 @@ namespace IttihadmembershipAPI.Controllers
 
             return Ok(result);
         }
-        //[Authorize]
+        [Authorize]
         [HttpPost]
         [Route("NewGetMemberships")]
         public IActionResult NewGetMemberships([FromBody] MemberShipDTO obj)

@@ -1,5 +1,6 @@
 ﻿using IttihadmembershipAPI.Business;
 using IttihadmembershipAPI.DTO_s;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace IttihadmembershipAPI.Controllers
@@ -13,6 +14,7 @@ namespace IttihadmembershipAPI.Controllers
         {
            _PackageService = PackageService;
         }
+        [Authorize]
         [HttpPost]
         [Route("NewPackage")]
         public IActionResult NewPackage([FromBody] PackageDTO obj)
@@ -23,6 +25,7 @@ namespace IttihadmembershipAPI.Controllers
 
             return Ok(result);
         }
+        [Authorize]
         [HttpPost]
         [Route("NewGetPackages")]
         public IActionResult NewGetPackages([FromBody] PackageDTO obj)
