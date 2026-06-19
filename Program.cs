@@ -25,6 +25,8 @@ builder.Services.AddScoped<IWebsiteModel, WebsiteModel>();
 builder.Services.AddScoped<IWebsiteService, WebsiteService>();
 builder.Services.AddScoped<IMemberShipModel, MemberShipModel>();
 builder.Services.AddScoped<IMemberShipService, MemberShipService>();
+builder.Services.AddScoped<IPackageModel, PackageModel>();
+builder.Services.AddScoped<IPackageService, PackageService>();
 builder.Services.AddSwaggerGen(options =>
 {
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

@@ -6,12 +6,12 @@ namespace IttihadmembershipAPI.Business
     public class UsersService : IUsersService
     {
         private readonly IUsersModel _UsersModel;
-        private readonly IJwtTokenService _jwtTokenService;
-        public UsersService(IUsersModel _UsersModel, IJwtTokenService jwtTokenService)
+        
+        public UsersService(IUsersModel _UsersModel)
         {
             {
                 this._UsersModel = _UsersModel;
-                _jwtTokenService = jwtTokenService;
+               
             }
         }
         public UsersResponseDTO GetUsers(UsersDTO obj)
