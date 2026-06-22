@@ -80,29 +80,118 @@ namespace IttihadmembershipAPI.DataAccess
                 };
             }
         }
-        public SqlDataReader GetNationality(NationalityDTO obj)
+        public NationalityResponseDTO GetNationality(NationalityDTO obj)
         {
+            var response = new NationalityResponseDTO();
+
             try
             {
                 var parameter = new[]
                 {
-                    new SqlParameter("@Id",obj.Id),
+            new SqlParameter("@Id", obj.Id)
+        };
 
-                };
-                return DbConnector.ExecuteReader("[Admin].[GetNationality]", parameter);
+                using SqlDataReader data =
+                    DbConnector.ExecuteReader("[Admin].[GetNationality]", parameter);
+
+                if (data.HasRows)
+                {
+                    while (data.Read())
+                    {
+                        response.Nationality.Add(new NationalityDTO
+                        {
+                            Id = Convert.ToInt32(data["Id"]),
+
+                            NameEn = data["NameEn"]?.ToString(),
+                            NameAr = data["NameAr"]?.ToString()
+
+
+                        });
+                    }
+
+                    response.StatusCode = 1;
+                    response.Message = "Success";
+                }
+                else
+                {
+                    response.StatusCode = 0;
+                    response.Message = "No records found";
+                }
+
+                return response;
             }
             catch (Exception ex)
             {
-
-                return null;
+                return new NationalityResponseDTO
+                {
+                    StatusCode = 500,
+                    Message = ex.Message
+                };
             }
         }
+        public PackageResponseDTO WebsitePackages(PackageDTO obj)
+        {
+            var response = new PackageResponseDTO();
+
+            try
+            {
+                var parameter = new[]
+                {
+            new SqlParameter("@Id", obj.Id)
+        };
+
+                using SqlDataReader data =
+                    DbConnector.ExecuteReader("[Common].[WebsitePackages]", parameter);
+
+                if (data.HasRows)
+                {
+                    while (data.Read())
+                    {
+                        response.Packages.Add(new PackageDTO
+                        {
+                            Id = Convert.ToInt32(data["PakageID"]),
+                            MembershipId = Convert.ToInt32(data["MembershipID"]),
+                            Price = Convert.ToInt32(data["Price"]),
+                            StartDate = data["StartDate"] != DBNull.Value
+                               ? DateOnly.FromDateTime((DateTime)data["StartDate"])
+                               : null,
+                            EndDate = data["EndDate"] != DBNull.Value
+                               ? DateOnly.FromDateTime((DateTime)data["EndDate"])
+                               : null,
+                            MembershipName = data["MembershipName"]?.ToString(),
+                            IsActive = Convert.ToBoolean(data["IsActive"]),
+
+                        });
+                    }
+
+                    response.StatusCode = 1;
+                    response.Message = "Success";
+                }
+                else
+                {
+                    response.StatusCode = 0;
+                    response.Message = "No records found";
+                }
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new PackageResponseDTO
+                {
+                    StatusCode = 500,
+                    Message = ex.Message
+                };
+            }
+        }
+
     }
     public interface IWebsiteModel
     {
         UserDTO UserAuthentication(string Username);
         CommonDTO UserRegister(WebsiteDTO request);
-        SqlDataReader GetNationality(NationalityDTO obj);
+        NationalityResponseDTO GetNationality(NationalityDTO obj);
+        PackageResponseDTO WebsitePackages(PackageDTO obj);
 
     }
 }

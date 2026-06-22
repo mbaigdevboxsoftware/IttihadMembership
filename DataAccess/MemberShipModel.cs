@@ -6,51 +6,106 @@ namespace IttihadmembershipAPI.DataAccess
 {
     public class MemberShipModel: IMemberShipModel
     {
-        public SqlDataReader ManageMembership(MemberShipDTO obj)
+        public MemberShipDTO ManageMembership(MemberShipDTO obj)
         {
             try
             {
                 var parameter = new[]
                 {
-                    new SqlParameter("@Id",obj.Id),
-                    new SqlParameter("@DurationDays",obj.DurationDays),
-                    new SqlParameter("@MembershipName",obj.MembershipName),
-                    new SqlParameter("@Description",obj.Description),
-                    new SqlParameter("@IsActive",obj.IsActive),
-                    new SqlParameter("@FlagId",obj.FlagId),
-                    new SqlParameter("@CreatedBy",obj.CreatedBy),
-                    new SqlParameter("@ModifiedBy",obj.ModifiedBy)
-                };
-                return DbConnector.ExecuteReader("[Admin].[ManageMembership]", parameter);
+            new SqlParameter("@Id", obj.Id),
+            new SqlParameter("@DurationDays", obj.DurationDays),
+            new SqlParameter("@MembershipName", obj.MembershipName),
+            new SqlParameter("@Description", obj.Description),
+            new SqlParameter("@IsActive", obj.IsActive),
+            new SqlParameter("@FlagId", obj.FlagId),
+            new SqlParameter("@CreatedBy", obj.CreatedBy),
+            new SqlParameter("@ModifiedBy", obj.ModifiedBy)
+        };
+
+                using SqlDataReader reader =
+                    DbConnector.ExecuteReader("[Admin].[ManageMembership]", parameter);
+
+                if (reader.Read())
+                {
+                    obj.StatusCode = Convert.ToInt32(reader["StatusCode"]);
+                    obj.Message = reader["Message"]?.ToString() ?? string.Empty;
+                }
+                else
+                {
+                    obj.StatusCode = 500;
+                    obj.Message = "No response from database.";
+                }
+
+                return obj;
             }
             catch (Exception ex)
             {
-                throw;
+                return new MemberShipDTO
+                {
+                    StatusCode = 500,
+                    Message = ex.Message
+                };
             }
         }
-        public SqlDataReader GetMemberships(MemberShipDTO obj)
+
+        public MemberShipResponseDTO GetMemberships(MemberShipDTO obj)
         {
+            var response = new MemberShipResponseDTO();
+
             try
             {
                 var parameter = new[]
                 {
-                    new SqlParameter("@Id",obj.Id),
+            new SqlParameter("@Id", obj.Id)
+        };
 
-                };
-                return DbConnector.ExecuteReader("[Admin].[GetMemberships]", parameter);
+                using SqlDataReader data =
+                    DbConnector.ExecuteReader("[Admin].[GetMemberships]", parameter);
+
+                if (data.HasRows)
+                {
+                    while (data.Read())
+                    {
+                        response.Members.Add(new MemberShipDTO
+                        {
+                            Id = Convert.ToInt32(data["MembershipID"]),
+                            DurationDays = Convert.ToInt32(data["DurationDays"]),
+                            MembershipName = data["MembershipName"]?.ToString(),
+                            Description = data["Description"]?.ToString(),
+                            IsActive = Convert.ToBoolean(data["IsActive"]),
+                            CreatedBy = Convert.ToInt32(data["CreatedBy"]),
+                            CreatedDate = data["CreatedDate"] != DBNull.Value
+                           ? Convert.ToDateTime(data["CreatedDate"])
+                           : null,
+                        });
+                    }
+
+                    response.StatusCode = 1;
+                    response.Message = "Success";
+                }
+                else
+                {
+                    response.StatusCode = 0;
+                    response.Message = "No records found";
+                }
+
+                return response;
             }
             catch (Exception ex)
             {
-
-                return null;
+                return new MemberShipResponseDTO
+                {
+                    StatusCode = 500,
+                    Message = ex.Message
+                };
             }
         }
     }
     public interface IMemberShipModel
     {
 
-        SqlDataReader ManageMembership(MemberShipDTO obj);
-        SqlDataReader GetMemberships(MemberShipDTO obj);
+        MemberShipDTO ManageMembership(MemberShipDTO obj);
+        MemberShipResponseDTO GetMemberships(MemberShipDTO obj);
     }
 
 }

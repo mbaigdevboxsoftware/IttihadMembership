@@ -20,12 +20,13 @@ namespace IttihadmembershipAPI.Controllers
         public IActionResult ManageMembership([FromBody] MemberShipDTO obj)
         {
             var result = _MemberShipService.ManageMembership(obj);
+
             if (result == null)
                 return StatusCode(500, "Something went wrong");
 
             return Ok(result);
         }
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         [Route("NewGetMemberships")]
         public IActionResult NewGetMemberships([FromBody] MemberShipDTO obj)

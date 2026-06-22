@@ -25,7 +25,8 @@ namespace IttihadmembershipAPI.Controllers
 
             return Ok(result);
         }
-        [Authorize]
+        
+       // [Authorize]
         [HttpPost]
         [Route("NewGetPackages")]
         public IActionResult NewGetPackages([FromBody] PackageDTO obj)

@@ -17,7 +17,7 @@ namespace IttihadmembershipAPI.Controllers
             _UsersService = UsersService;
         }
 
-        [Authorize]
+        //[Authorize]
         [HttpPost]
         [Route("NewgetUsers")]
         public IActionResult NewgetUsers([FromBody] UsersDTO obj)

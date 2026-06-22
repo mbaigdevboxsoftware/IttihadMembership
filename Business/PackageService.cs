@@ -15,80 +15,16 @@ namespace IttihadmembershipAPI.Business
             }
 
         }
+        
         public PackageDTO NewPackage(PackageDTO obj)
         {
-            try
-            {
-                var data = _PackageModel.NewPackage(obj);
-
-                if (data != null && data.HasRows)
-                {
-                    while (data.Read())
-                    {
-                        obj.Message = data["Message"].ToString();
-                        obj.StatusCode = Convert.ToInt32(data["StatusCode"]);
-                    }
-                    data.Close();
-                }
-
-                return obj;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
+            return _PackageModel.NewPackage(obj);
         }
         public PackageResponseDTO GetPackages(PackageDTO obj)
         {
-            var response = new PackageResponseDTO();
-
-            try
-            {
-                var data = _PackageModel.GetPackages(obj);
-
-                if (data != null && data.HasRows)
-                {
-                    while (data.Read())
-                    {
-                        response.Packages.Add(new PackageDTO
-                        {
-                            Id = Convert.ToInt32(data["PakageID"]),
-                            MembershipId = Convert.ToInt32(data["MembershipID"]),
-                            Price = Convert.ToInt32(data["Price"]),
-                            StartDate = data["StartDate"] != DBNull.Value
-                                ? DateOnly.FromDateTime((DateTime)data["StartDate"])
-                                : null,
-                            EndDate = data["EndDate"] != DBNull.Value
-                                ? DateOnly.FromDateTime((DateTime)data["EndDate"])
-                                : null,
-                            MembershipName = data["MembershipName"]?.ToString(),
-                            IsActive = Convert.ToBoolean(data["IsActive"]),
-                          
-                        });
-                    }
-
-                    response.StatusCode = 1;
-                    response.Message = "Success";
-                }
-                else
-                {
-                    response.StatusCode = 0;
-                    response.Message = "No records found";
-                }
-
-                data?.Close();
-
-                return response;
-            }
-            catch (Exception ex)
-            {
-                return new PackageResponseDTO
-                {
-                    StatusCode = 500,
-                    Message = ex.Message
-                };
-            }
+            return _PackageModel.GetPackages(obj);
         }
+       
 
     }
     public interface IPackageService

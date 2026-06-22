@@ -16,75 +16,15 @@ namespace IttihadmembershipAPI.Business
         }
         public MemberShipDTO ManageMembership(MemberShipDTO obj)
         {
-            try
-            {
-                var data = _MemberShipModel.ManageMembership(obj);
-
-                if (data != null && data.HasRows)
-                {
-                    while (data.Read())
-                    {
-                        obj.Message = data["Message"].ToString();
-                        obj.StatusCode = Convert.ToInt32(data["StatusCode"]);
-                    }
-                    data.Close();
-                }
-
-                return obj;
-            }
-            catch (Exception)
-            {
-                return null;
-            }
+            return _MemberShipModel.ManageMembership(obj);
         }
+
+
         public MemberShipResponseDTO GetMemberships(MemberShipDTO obj)
         {
-            var response = new MemberShipResponseDTO();
-
-            try
-            {
-                var data = _MemberShipModel.GetMemberships(obj);
-
-                if (data != null && data.HasRows)
-                {
-                    while (data.Read())
-                    {
-                        response.Members.Add(new MemberShipDTO
-                        {
-                            Id = Convert.ToInt32(data["MembershipID"]),
-                            DurationDays = Convert.ToInt32(data["DurationDays"]),
-                            MembershipName = data["MembershipName"]?.ToString(),
-                            Description = data["Description"]?.ToString(),                                               
-                            IsActive = Convert.ToBoolean(data["IsActive"]),
-                            CreatedBy = Convert.ToInt32(data["CreatedBy"]),
-                            CreatedDate = data["CreatedDate"] != DBNull.Value
-                            ? Convert.ToDateTime(data["CreatedDate"])
-                            : null,
-                        });
-                    }
-
-                    response.StatusCode = 1;
-                    response.Message = "Success";
-                }
-                else
-                {
-                    response.StatusCode = 0;
-                    response.Message = "No records found";
-                }
-
-                data?.Close();
-
-                return response;
-            }
-            catch (Exception ex)
-            {
-                return new MemberShipResponseDTO
-                {
-                    StatusCode = 500,
-                    Message = ex.Message
-                };
-            }
+            return _MemberShipModel.GetMemberships(obj);
         }
+
     }
 
     public interface IMemberShipService

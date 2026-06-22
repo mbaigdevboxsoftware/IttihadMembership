@@ -41,49 +41,13 @@ namespace IttihadmembershipAPI.Business
         }
         public NationalityResponseDTO GetNationality(NationalityDTO obj)
         {
-            var response = new NationalityResponseDTO();
-
-            try
-            {
-                var data = _WebsiteModel.GetNationality(obj);
-
-                if (data != null && data.HasRows)
-                {
-                    while (data.Read())
-                    {
-                        response.Nationality.Add(new NationalityDTO
-                        {
-                            Id = Convert.ToInt32(data["Id"]),
-                           
-                            NameEn = data["NameEn"]?.ToString(),
-                            NameAr = data["NameAr"]?.ToString()
-                           
-                            
-                        });
-                    }
-
-                    response.StatusCode = 1;
-                    response.Message = "Success";
-                }
-                else
-                {
-                    response.StatusCode = 0;
-                    response.Message = "No records found";
-                }
-
-                data?.Close();
-
-                return response;
-            }
-            catch (Exception ex)
-            {
-                return new NationalityResponseDTO
-                {
-                    StatusCode = 500,
-                    Message = ex.Message
-                };
-            }
+            return _WebsiteModel.GetNationality(obj);
         }
+        public PackageResponseDTO WebsitePackages(PackageDTO obj)
+        {
+            return _WebsiteModel.WebsitePackages(obj);
+        }
+
     }
     
     public interface IWebsiteService
@@ -91,5 +55,6 @@ namespace IttihadmembershipAPI.Business
         Task<AuthResponseDTO> UserAuthentication(LoginRequestDTO request);
         Task<CommonDTO> UserRegister(WebsiteDTO request);
         NationalityResponseDTO GetNationality(NationalityDTO obj);
+        PackageResponseDTO WebsitePackages(PackageDTO obj);
     }
 }
