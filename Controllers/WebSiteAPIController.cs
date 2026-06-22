@@ -45,6 +45,13 @@ namespace IttihadmembershipAPI.Controllers
             var result = _WebsiteService.GetNationality(obj);
             return Ok(result);
         }
+        [HttpPost]
+        [Route("NewWebsitePackages")]
+        public IActionResult WebsitePackages([FromBody] PackageDTO obj)
+        {
+            var result = _WebsiteService.WebsitePackages(obj);
+            return Ok(result);
+        }
 
     }
 }
