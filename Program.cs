@@ -4,10 +4,19 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.OpenApi;
+using Serilog;
 
 
 
 var builder = WebApplication.CreateBuilder(args);
+
+//Logs setup
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -79,15 +88,17 @@ builder.Services.AddCors(options =>
         policy.WithOrigins("http://localhost:4200") // Your explicit Angular URL
               .AllowAnyHeader()
               .AllowAnyMethod()
-              .AllowCredentials(); // Allows HttpOnly cookies to pass safely
+              .AllowCredentials(); 
     });
 });
 
-builder.Services.AddControllers();
+
+
+
+
 
 
 var app = builder.Build();
-
 
 // Configure HTTP request pipeline
 if (app.Environment.IsDevelopment())
@@ -97,14 +108,48 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI(c =>
     {
         c.SwaggerEndpoint("/swagger/v1/swagger.json", "Ittihad Membership API V1");
-        c.RoutePrefix = string.Empty; // Open Swagger at root URL
+        c.RoutePrefix = string.Empty; 
     });
 }
+
+app.Use(async (context, next) =>
+{
+    var correlationId = Guid.NewGuid().ToString();
+
+    context.Response.Headers["X-Correlation-ID"] = correlationId;
+
+    using (Serilog.Context.LogContext.PushProperty(
+        "CorrelationId",
+        correlationId))
+    {
+        await next();
+    }
+});
+
+app.UseExceptionHandler(errorApp =>
+{
+    errorApp.Run(async context =>
+    {
+        var exceptionHandler =
+            context.Features.Get<
+                Microsoft.AspNetCore.Diagnostics.IExceptionHandlerFeature>();
+
+        if (exceptionHandler != null)
+        {
+            Log.Error(
+                exceptionHandler.Error,
+                "Unhandled exception");
+        }
+
+        context.Response.StatusCode = 500;
+    });
+});
+app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 app.UseCors("AngularAdminPolicy");
 
-app.UseAuthentication(); // Must come before UseAuthorization
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllers();

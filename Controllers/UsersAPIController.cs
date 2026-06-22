@@ -3,7 +3,6 @@ using IttihadmembershipAPI.DTO_s;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Text;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace IttihadmembershipAPI.Controllers
 {

@@ -6,6 +6,11 @@ namespace IttihadmembershipAPI.DataAccess
 {
     public class UsersModel : IUsersModel
     {
+        private readonly ILogger<UsersModel> _logger;
+        public UsersModel(ILogger<UsersModel> logger)
+        {
+            _logger = logger;
+        }
         public SqlDataReader getUsers(UsersDTO obj)
         {
             try
@@ -19,8 +24,8 @@ namespace IttihadmembershipAPI.DataAccess
             }
             catch (Exception ex)
             {
-               
-                return null;
+                _logger.LogError(ex,"Database error while executing Admin.GetUsers");
+                throw;
             }
         }
     }
