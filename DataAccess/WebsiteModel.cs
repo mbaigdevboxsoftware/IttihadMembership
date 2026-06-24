@@ -39,6 +39,7 @@ namespace IttihadmembershipAPI.DataAccess
             {
                 var parameters = new[]
                 {
+                    new SqlParameter("@Id", request.Id),
             new SqlParameter("@FirstName", request.FirstName),
             new SqlParameter("@LastName", request.LastName),
             new SqlParameter("@Gender", request.Gender),
@@ -50,7 +51,9 @@ namespace IttihadmembershipAPI.DataAccess
             new SqlParameter("@MobileNo", request.MobileNo),
             new SqlParameter("@CreatedBy", request.CreatedBy),
             new SqlParameter("@ModifiedBy", request.ModifiedBy),
-            new SqlParameter("@IsActive", request.IsActive)
+            new SqlParameter("@IsActive", request.IsActive),
+            new SqlParameter("@FlagId", request.FlagId),
+            
         };
 
                 using SqlDataReader reader =
@@ -152,6 +155,7 @@ namespace IttihadmembershipAPI.DataAccess
                             Id = Convert.ToInt32(data["PakageID"]),
                             MembershipId = Convert.ToInt32(data["MembershipID"]),
                             Price = Convert.ToInt32(data["Price"]),
+                            Description = data["Description"]?.ToString(),
                             StartDate = data["StartDate"] != DBNull.Value
                                ? DateOnly.FromDateTime((DateTime)data["StartDate"])
                                : null,
@@ -184,7 +188,72 @@ namespace IttihadmembershipAPI.DataAccess
                 };
             }
         }
+        public List<WebsiteDTO> GetUsers(WebsiteDTO obj)
+        {
+            try
+            {
+                var parameters = new[]
+                {
+            new SqlParameter("@Id", obj.MemberID)
+        };
 
+                using (var result =
+                    DbConnector.ExecuteReader("[Common].[GetUsers]", parameters))
+                {
+                    return CustomDataReaderToGenericExtension.GetDataObjects<WebsiteDTO>(result).ToList();
+                }
+            }
+            catch
+            {
+                return new List<WebsiteDTO>();
+            }
+        }
+        public List<WebsiteDTO> CheckPassword(CheckPasswordDTO obj)
+        {
+            var parameters = new[]
+            {
+        new SqlParameter("@MemberId", obj.MemberId)
+    };
+
+            using var result =
+                DbConnector.ExecuteReader("[Common].[uspCheckPassword]", parameters);
+
+            return CustomDataReaderToGenericExtension
+                .GetDataObjects<WebsiteDTO>(result)
+                .ToList();
+        }
+        public CommonDTO ChangePassword(CheckPasswordDTO obj)
+        {
+            try
+            {
+                var parameters = new[]
+                {
+            new SqlParameter("@MemberId", obj.MemberId),
+            new SqlParameter("@NewPassword", obj.NewPassword)
+        };
+
+                using var data =
+                    DbConnector.ExecuteReader("[Common].[uspChangePassword]", parameters);
+
+                var response = new CommonDTO();
+
+                if (data.Read())
+                {
+                    response.StatusCode = 1;
+                    response.Message = data["Message"].ToString();
+                }
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new CommonDTO
+                {
+                    StatusCode = 500,
+                    Message = ex.Message
+                };
+            }
+        }
     }
     public interface IWebsiteModel
     {
@@ -192,6 +261,9 @@ namespace IttihadmembershipAPI.DataAccess
         CommonDTO UserRegister(WebsiteDTO request);
         NationalityResponseDTO GetNationality(NationalityDTO obj);
         PackageResponseDTO WebsitePackages(PackageDTO obj);
+        List<WebsiteDTO> GetUsers(WebsiteDTO obj);
+        List<WebsiteDTO> CheckPassword(CheckPasswordDTO obj);
+        CommonDTO ChangePassword(CheckPasswordDTO obj);
 
     }
 }
