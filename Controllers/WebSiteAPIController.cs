@@ -70,6 +70,27 @@ namespace IttihadmembershipAPI.Controllers
             var result = _WebsiteService.WebsitePackages(obj);
             return Ok(result);
         }
+        [HttpPost]
+        [Route("NewGetUsers")]
+        public IActionResult GetUsers([FromBody] WebsiteDTO obj)
+        {
+            var result = _WebsiteService.GetUsers(obj);
+            return Ok(result);
+        }
+        [HttpPost]
+        [Route("CheckPassword")]
+        public IActionResult CheckPassword([FromBody] CheckPasswordDTO obj)
+        {
+            var result = _WebsiteService.CheckPassword(obj);
+            return Ok(result);
+        }
+        [HttpPost]
+        [Route("ChangePassword")]
+        public IActionResult ChangePassword([FromBody] CheckPasswordDTO obj)
+        {
+            var result = _WebsiteService.ChangePassword(obj);
+            return Ok(result);
+        }
 
     }
 }

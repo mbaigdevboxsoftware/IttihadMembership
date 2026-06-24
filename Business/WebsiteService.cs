@@ -1,5 +1,6 @@
 ﻿using IttihadmembershipAPI.DataAccess;
 using IttihadmembershipAPI.DTO_s;
+using IttihadmembershipAPI.GenericHelper;
 
 namespace IttihadmembershipAPI.Business
 {
@@ -64,6 +65,68 @@ namespace IttihadmembershipAPI.Business
             return _WebsiteModel.WebsitePackages(obj);
         }
 
+        public List<WebsiteDTO> GetUsers(WebsiteDTO obj)
+        {
+            return _WebsiteModel.GetUsers(obj);
+        }
+
+        public CheckPasswordDTO CheckPassword(CheckPasswordDTO obj)
+        {
+            var member = _WebsiteModel.CheckPassword(obj).FirstOrDefault();
+
+            if (member == null)
+            {
+                obj.StatusCode = 0;
+                obj.Message = "Member not found";
+                return obj;
+            }
+
+            // Validate old password
+            if (!BCryption.CheckPassword(obj.OldPassword, member.Password))
+            {
+                obj.StatusCode = 0;
+                obj.Message = "Old password is incorrect";
+                return obj;
+            }
+
+            // Validate new password is different
+            if (BCryption.CheckPassword(obj.NewPassword, member.Password))
+            {
+                obj.StatusCode = 0;
+                obj.Message = "New password cannot be same as old password";
+                return obj;
+            }
+
+            obj.StatusCode = 1;
+            obj.Message = "Validation successful";
+
+            return obj;
+        }
+        public CommonDTO ChangePassword(CheckPasswordDTO obj)
+        {
+            var response = new CommonDTO();
+
+            try
+            {
+                // Hash new password
+                string hashedPassword = BCrypt.Net.BCrypt.HashPassword(obj.NewPassword);
+
+                obj.NewPassword = hashedPassword;
+
+                response = _WebsiteModel.ChangePassword(obj);
+
+                return response;
+            }
+            catch (Exception ex)
+            {
+                return new CommonDTO
+                {
+                    StatusCode = 500,
+                    Message = ex.Message
+                };
+            }
+        }
+
     }
     
     public interface IWebsiteService
@@ -72,5 +135,9 @@ namespace IttihadmembershipAPI.Business
         Task<CommonDTO> UserRegister(WebsiteDTO request);
         NationalityResponseDTO GetNationality(NationalityDTO obj);
         PackageResponseDTO WebsitePackages(PackageDTO obj);
+        List<WebsiteDTO> GetUsers(WebsiteDTO obj);
+
+        CheckPasswordDTO CheckPassword(CheckPasswordDTO obj);
+        CommonDTO ChangePassword(CheckPasswordDTO obj);
     }
 }
