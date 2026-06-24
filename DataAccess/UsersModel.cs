@@ -6,7 +6,12 @@ namespace IttihadmembershipAPI.DataAccess
 {
     public class UsersModel : IUsersModel
     {
-        public UsersResponseDTO GetUsers(UsersDTO obj)
+        private readonly ILogger<UsersModel> _logger;
+        public UsersModel(ILogger<UsersModel> logger)
+        {
+            _logger = logger;
+        }
+        public SqlDataReader getUsers(UsersDTO obj)
         {
             var response = new UsersResponseDTO();
 
@@ -55,11 +60,8 @@ namespace IttihadmembershipAPI.DataAccess
             }
             catch (Exception ex)
             {
-                return new UsersResponseDTO
-                {
-                    StatusCode = 500,
-                    Message = ex.Message
-                };
+                _logger.LogError(ex,"Database error while executing Admin.GetUsers");
+                throw;
             }
         }
     }

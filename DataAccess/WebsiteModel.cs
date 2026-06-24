@@ -16,7 +16,7 @@ namespace IttihadmembershipAPI.DataAccess
                     new SqlParameter("@UserName",Username),
 
                 };
-                using (var result = DbConnector.ExecuteReader("[dbo].[uspValidateCredentials]", parameter))
+                using (var result = DbConnector.ExecuteReader("[Admin].[uspValidateUserCredentials]", parameter))
                 {
                     var list = CustomDataReaderToGenericExtension.GetDataObjects<UserDTO>(result);
 
@@ -46,7 +46,6 @@ namespace IttihadmembershipAPI.DataAccess
             new SqlParameter("@DOB", request.DOB),
             new SqlParameter("@PasswordHash", request.Password),
             new SqlParameter("@NationalId", request.NationalId),
-            new SqlParameter("@Nationality", request.Nationality),
             new SqlParameter("@EmailId", request.Email),
             new SqlParameter("@MobileNo", request.MobileNo),
             new SqlParameter("@CreatedBy", request.CreatedBy),
