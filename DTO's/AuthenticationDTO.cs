@@ -12,6 +12,11 @@ namespace IttihadmembershipAPI.DTO_s
         public string PasswordHash { get; set; } = string.Empty;
 
         public string Role { get; set; } = "User";
+
+        public int MemberID { get; set; } = 0;
+        public string FullName { get; set; } = string.Empty;
+        public string EmailId { get; set; } = string.Empty;
+        public string MobileNo { get; set; } = string.Empty;
     }
     public class LoginRequestDTO
     {
@@ -26,7 +31,14 @@ namespace IttihadmembershipAPI.DTO_s
         public string RefreshToken { get; set; }
 
         public DateTime ExpiresAt { get; set; }
+        public int EmployeeId { get; set; }
+        public string EmployeeName { get; set; }
+        public int MemberId { get; set; } = 0;
+        public string FullName { get; set; }= string.Empty;
+        public string EmailId { get; set; } = string.Empty;
+        public string MobileNo { get; set; } = string.Empty;
     }
+ 
 
     public class RegisterDTO()
     {

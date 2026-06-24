@@ -7,11 +7,13 @@ namespace IttihadmembershipAPI.Business
     {
         private readonly IWebsiteModel _WebsiteModel;
         private readonly IJwtTokenService _jwtTokenService;
-        public WebsiteService(IWebsiteModel _WebsiteModel, IJwtTokenService jwtTokenService)
+        private readonly IAuthenticationModel _AuthenticationModel;
+        public WebsiteService(IWebsiteModel _WebsiteModel, IJwtTokenService jwtTokenService, IAuthenticationModel _AuthenticationModel)
         {
             {
                 this._WebsiteModel = _WebsiteModel;
                 _jwtTokenService = jwtTokenService;
+                this._AuthenticationModel = _AuthenticationModel;
             }
         }
               public async Task<AuthResponseDTO> UserAuthentication(LoginRequestDTO request)
@@ -29,7 +31,21 @@ namespace IttihadmembershipAPI.Business
             if (!isValidPassword)
                 return null;
 
-            return _jwtTokenService.GenerateToken(user);
+            var authResponse = _jwtTokenService.GenerateToken(user);
+
+            authResponse.MemberId = user.MemberID;
+             authResponse.FullName = user.FullName;
+            authResponse.MobileNo = user.MobileNo;
+            authResponse.EmailId = user.EmailId;
+
+            _AuthenticationModel.SaveRefreshToken(
+                authResponse.MemberId,
+                authResponse.RefreshToken,
+                DateTime.UtcNow.AddDays(30));
+
+
+            return authResponse;
+        
         }
         public Task<CommonDTO> UserRegister(WebsiteDTO request)
         {

@@ -26,7 +26,25 @@ namespace IttihadmembershipAPI.Controllers
                     Message = "Invalid username or password"
                 });
 
-            return Ok(result);
+            // Set refresh token in HttpOnly cookie
+            Response.Cookies.Append("refreshToken", result.RefreshToken, new CookieOptions
+            {
+                HttpOnly = true,
+                Secure = false,
+                SameSite = SameSiteMode.Strict,
+                Expires = DateTime.UtcNow.AddDays(30)
+            });
+
+
+            // Return only access token to frontend
+            return Ok(new
+            {
+                accessToken = result.AccessToken,
+                MemeberId = result.MemberId,
+                EmailId = result.EmailId,
+                MobileNo = result.MobileNo,
+                expiresAt = result.ExpiresAt
+            });
         }
         [HttpPost("UserRegister")]
 

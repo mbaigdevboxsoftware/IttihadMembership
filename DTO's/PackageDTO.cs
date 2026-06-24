@@ -4,6 +4,7 @@
     {
         public int MembershipId { get; set; } = 0;
         public string MembershipName { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
         public int Id { get; set; } = 0;
         public int Price { get; set; } = 0;
 

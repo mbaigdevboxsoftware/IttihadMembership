@@ -2,6 +2,7 @@
 using IttihadmembershipAPI.DTO_s;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace IttihadmembershipAPI.Controllers
 {
@@ -19,7 +20,11 @@ namespace IttihadmembershipAPI.Controllers
         [Route("NewPackage")]
         public IActionResult NewPackage([FromBody] PackageDTO obj)
         {
-            var result = _PackageService.NewPackage(obj);
+            var userId = int.Parse(
+        User.FindFirst(ClaimTypes.NameIdentifier)?.Value
+        ?? throw new UnauthorizedAccessException());
+
+            var result = _PackageService.NewPackage(obj, userId);
             if (result == null)
                 return StatusCode(500, "Something went wrong");
 

@@ -136,8 +136,8 @@ namespace IttihadmembershipAPI.DataAccess
             {
                 var parameter = new[]
                 {
-            new SqlParameter("@Id", obj.Id)
-        };
+                    new SqlParameter("@Id", obj.Id)
+                };
 
                 using SqlDataReader data =
                     DbConnector.ExecuteReader("[Common].[WebsitePackages]", parameter);
@@ -150,6 +150,7 @@ namespace IttihadmembershipAPI.DataAccess
                         {
                             Id = Convert.ToInt32(data["PakageID"]),
                             MembershipId = Convert.ToInt32(data["MembershipID"]),
+                            Description =data["Description"].ToString(),
                             Price = Convert.ToInt32(data["Price"]),
                             StartDate = data["StartDate"] != DBNull.Value
                                ? DateOnly.FromDateTime((DateTime)data["StartDate"])

@@ -16,8 +16,10 @@ namespace IttihadmembershipAPI.Business
 
         }
         
-        public PackageDTO NewPackage(PackageDTO obj)
+        public PackageDTO NewPackage(PackageDTO obj, int userId)
         {
+            obj.CreatedBy = userId;
+            obj.ModifiedBy = userId;
             return _PackageModel.NewPackage(obj);
         }
         public PackageResponseDTO GetPackages(PackageDTO obj)
@@ -29,7 +31,7 @@ namespace IttihadmembershipAPI.Business
     }
     public interface IPackageService
     {
-        PackageDTO NewPackage(PackageDTO obj);
+        PackageDTO NewPackage(PackageDTO obj ,int userId);
         PackageResponseDTO GetPackages(PackageDTO obj);
     }
 }

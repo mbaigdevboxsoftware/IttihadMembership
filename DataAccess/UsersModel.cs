@@ -11,7 +11,7 @@ namespace IttihadmembershipAPI.DataAccess
         {
             _logger = logger;
         }
-        public SqlDataReader getUsers(UsersDTO obj)
+        public UsersResponseDTO GetUsers(UsersDTO obj)
         {
             var response = new UsersResponseDTO();
 
@@ -19,8 +19,8 @@ namespace IttihadmembershipAPI.DataAccess
             {
                 var parameter = new[]
                 {
-            new SqlParameter("@Id", obj.UserId)
-        };
+                     new SqlParameter("@Id", obj.UserId)
+                 };
 
                 using SqlDataReader reader =
                     DbConnector.ExecuteReader("[Admin].[GetUsers]", parameter);

@@ -34,10 +34,14 @@ namespace IttihadmembershipAPI.Business
 
             var authResponse =_jwtTokenService.GenerateToken(user);
 
+            authResponse.EmployeeId = user.EmployeeId;
+//            authResponse.EmployeeName = user.EmployeeName;
+
             _AuthenticationModel.SaveRefreshToken(
                 user.EmployeeId,
                 authResponse.RefreshToken,
                 DateTime.UtcNow.AddDays(30));
+
 
             return authResponse;
         }

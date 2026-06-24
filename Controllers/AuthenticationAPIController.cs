@@ -42,6 +42,7 @@ namespace IttihadmembershipAPI.Controllers
             return Ok(new
             {
                 accessToken = result.AccessToken,
+                employeeId=result.EmployeeId,
                 expiresAt = result.ExpiresAt
             });
         }
