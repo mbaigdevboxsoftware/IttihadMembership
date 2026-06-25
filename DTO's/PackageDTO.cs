@@ -20,4 +20,14 @@
         public int StatusCode { get; set; } = 0;
         public string Message { get; set; } = string.Empty;
     }
+
+    public class BenefitsDTO:CommonDTO
+    {
+        public int Id { get; set; } = 0;
+        public string Name { get; set; }
+        
+        public int InputType { get; set; } = 0;
+
+
+    }
 }

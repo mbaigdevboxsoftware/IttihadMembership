@@ -39,5 +39,20 @@ namespace IttihadmembershipAPI.Controllers
             var result = _PackageService.GetPackages(obj);
             return Ok(result);
         }
+
+        [HttpPost]
+        [Route("NewBenefits")]
+        public IActionResult Benefits([FromBody] BenefitsDTO obj)
+        {
+            var result = _PackageService.Benefits(obj);
+            return Ok(result);
+        }
+        [HttpPost]
+        [Route("NewGetBenefits")]
+        public IActionResult GetBenefits([FromBody] BenefitsDTO obj)
+        {
+            var result = _PackageService.GetBenefits(obj);
+            return Ok(result);
+        }
     }
 }
