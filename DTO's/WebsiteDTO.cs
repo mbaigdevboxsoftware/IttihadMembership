@@ -47,4 +47,19 @@
 
         public string Message { get; set; } = string.Empty;
     }
+
+    public class PaymentDTO:CommonDTO
+    {
+        public int SubscriptionId { get; set; } = 0;
+
+        public decimal TransactionAmount { get; set; }
+        public int FirstDigits { get; set; } = 0;
+        public int LastDigits { get; set; } = 0;
+        public int ExpireMonth { get; set; } = 0;
+        public int ExpireYear { get; set; } = 0;
+        public string CardHolder { get; set; } = string.Empty;
+        public string CardBrand { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+
+    }
 }

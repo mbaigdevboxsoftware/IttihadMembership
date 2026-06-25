@@ -1,6 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using IttihadmembershipAPI.Business;
+﻿using IttihadmembershipAPI.Business;
 using IttihadmembershipAPI.DTO_s;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace IttihadmembershipAPI.Controllers
 {
@@ -89,6 +90,19 @@ namespace IttihadmembershipAPI.Controllers
         public IActionResult ChangePassword([FromBody] CheckPasswordDTO obj)
         {
             var result = _WebsiteService.ChangePassword(obj);
+            return Ok(result);
+        }
+
+       // [Authorize]
+        [HttpPost]
+        [Route("PaymentDetails")]
+        public IActionResult PaymentDetails([FromBody] PaymentDTO obj)
+        {
+            var result = _WebsiteService.PaymentDetails(obj);
+
+            if (result == null)
+                return StatusCode(500, "Something went wrong");
+
             return Ok(result);
         }
 

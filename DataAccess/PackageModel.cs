@@ -20,7 +20,8 @@ namespace IttihadmembershipAPI.DataAccess
                     new SqlParameter("@IsActive",obj.IsActive),
                     new SqlParameter("@FlagId",obj.FlagId),
                     new SqlParameter("@CreatedBy",obj.CreatedBy),
-                    new SqlParameter("@ModifiedBy",obj.ModifiedBy)
+                    new SqlParameter("@ModifiedBy",obj.ModifiedBy),
+                    new SqlParameter("@Category",obj.Category)
                 };
 
                 using SqlDataReader reader =
@@ -70,6 +71,7 @@ namespace IttihadmembershipAPI.DataAccess
                         response.Packages.Add(new PackageDTO
                         {
                             Id = Convert.ToInt32(data["PakageID"]),
+                            Category = Convert.ToInt32(data["Category"]),
                             MembershipId = Convert.ToInt32(data["MembershipID"]),
                             Price = Convert.ToInt32(data["Price"]),
                             StartDate = data["StartDate"] != DBNull.Value

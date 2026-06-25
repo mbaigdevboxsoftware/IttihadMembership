@@ -6,6 +6,7 @@
         public string MembershipName { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
         public int Id { get; set; } = 0;
+        public int Category { get; set; } = 0;
         public int Price { get; set; } = 0;
 
         public DateOnly? StartDate { get; set; } 

@@ -152,10 +152,10 @@ namespace IttihadmembershipAPI.DataAccess
                         response.Packages.Add(new PackageDTO
                         {
                             Id = Convert.ToInt32(data["PakageID"]),
+                            Category = Convert.ToInt32(data["Category"]),
                             MembershipId = Convert.ToInt32(data["MembershipID"]),
                             Description =data["Description"].ToString(),
                             Price = Convert.ToInt32(data["Price"]),
-                            Description = data["Description"]?.ToString(),
                             StartDate = data["StartDate"] != DBNull.Value
                                ? DateOnly.FromDateTime((DateTime)data["StartDate"])
                                : null,
@@ -254,6 +254,50 @@ namespace IttihadmembershipAPI.DataAccess
                 };
             }
         }
+        public PaymentDTO PaymentDetails(PaymentDTO obj)
+        {
+            try
+            {
+                var parameter = new[]
+                {
+            new SqlParameter("@SubsciptionId", obj.SubscriptionId),
+            new SqlParameter("@TransactionAmount", obj.TransactionAmount),
+            new SqlParameter("@FirstDigits", obj.FirstDigits),
+            new SqlParameter("@LastDigits", obj.LastDigits),
+            new SqlParameter("@ExpireMonth", obj.ExpireMonth),
+            new SqlParameter("@ExpireYear", obj.ExpireYear),
+            new SqlParameter("@CardHolder", obj.CardHolder),
+            new SqlParameter("@CardBrand", obj.CardBrand),
+            new SqlParameter("@Description", obj.Description),
+            new SqlParameter("@IsActive", obj.IsActive),
+            new SqlParameter("@CreatedBy", obj.CreatedBy),
+        };
+
+                using SqlDataReader reader =
+                    DbConnector.ExecuteReader("[Common].[Subscription]", parameter);
+
+                if (reader.Read())
+                {
+                    obj.StatusCode = Convert.ToInt32(reader["StatusCode"]);
+                    obj.Message = reader["Message"]?.ToString() ?? string.Empty;
+                }
+                else
+                {
+                    obj.StatusCode = 500;
+                    obj.Message = "No response from database.";
+                }
+
+                return obj;
+            }
+            catch (Exception ex)
+            {
+                return new PaymentDTO
+                {
+                    StatusCode = 500,
+                    Message = ex.Message
+                };
+            }
+        }
     }
     public interface IWebsiteModel
     {
@@ -263,6 +307,7 @@ namespace IttihadmembershipAPI.DataAccess
         PackageResponseDTO WebsitePackages(PackageDTO obj);
         List<WebsiteDTO> GetUsers(WebsiteDTO obj);
         List<WebsiteDTO> CheckPassword(CheckPasswordDTO obj);
+        PaymentDTO PaymentDetails(PaymentDTO obj);
         CommonDTO ChangePassword(CheckPasswordDTO obj);
 
     }

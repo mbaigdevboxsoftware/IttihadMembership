@@ -126,6 +126,10 @@ namespace IttihadmembershipAPI.Business
                 };
             }
         }
+        public PaymentDTO PaymentDetails(PaymentDTO obj)
+        {
+            return _WebsiteModel.PaymentDetails(obj);
+        }
 
     }
     
@@ -139,5 +143,7 @@ namespace IttihadmembershipAPI.Business
 
         CheckPasswordDTO CheckPassword(CheckPasswordDTO obj);
         CommonDTO ChangePassword(CheckPasswordDTO obj);
+
+        PaymentDTO PaymentDetails(PaymentDTO obj);
     }
 }
