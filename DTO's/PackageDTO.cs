@@ -24,7 +24,7 @@
     public class BenefitsDTO:CommonDTO
     {
         public int Id { get; set; } = 0;
-        public string Name { get; set; }
+        public string Name { get; set; } = string.Empty;
         
         public int InputType { get; set; } = 0;
 

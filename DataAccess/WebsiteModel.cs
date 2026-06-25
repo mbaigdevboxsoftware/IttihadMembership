@@ -260,7 +260,7 @@ namespace IttihadmembershipAPI.DataAccess
             {
                 var parameter = new[]
                 {
-            new SqlParameter("@SubsciptionId", obj.SubscriptionId),
+            new SqlParameter("@SubscriptionId", obj.SubscriptionId),
             new SqlParameter("@TransactionAmount", obj.TransactionAmount),
             new SqlParameter("@FirstDigits", obj.FirstDigits),
             new SqlParameter("@LastDigits", obj.LastDigits),
