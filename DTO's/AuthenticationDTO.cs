@@ -17,6 +17,7 @@ namespace IttihadmembershipAPI.DTO_s
         public string FullName { get; set; } = string.Empty;
         public string EmailId { get; set; } = string.Empty;
         public string MobileNo { get; set; } = string.Empty;
+        public int MemberShipId { get; set; } = 0;
     }
     public class LoginRequestDTO
     {
@@ -34,6 +35,7 @@ namespace IttihadmembershipAPI.DTO_s
         public int EmployeeId { get; set; }
         public string EmployeeName { get; set; }
         public int MemberId { get; set; } = 0;
+        public int MemberShipId { get; set; } = 0;
         public string FullName { get; set; }= string.Empty;
         public string EmailId { get; set; } = string.Empty;
         public string MobileNo { get; set; } = string.Empty;

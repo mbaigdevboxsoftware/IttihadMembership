@@ -42,9 +42,11 @@ namespace IttihadmembershipAPI.Controllers
             {
                 accessToken = result.AccessToken,
                 MemeberId = result.MemberId,
+                MemberShipId = result.MemberShipId,
                 EmailId = result.EmailId,
                 MobileNo = result.MobileNo,
-                expiresAt = result.ExpiresAt
+                expiresAt = result.ExpiresAt,
+                FullName=result.FullName
             });
         }
         [HttpPost("UserRegister")]
@@ -103,6 +105,13 @@ namespace IttihadmembershipAPI.Controllers
             if (result == null)
                 return StatusCode(500, "Something went wrong");
 
+            return Ok(result);
+        }
+        [HttpPost]
+        [Route("NewGetUserPaymentDetails")]
+        public IActionResult GetUserPaymentDetails([FromBody] PaymentDTO obj)
+        {
+            var result = _WebsiteService.GetUserPaymentDetails(obj);
             return Ok(result);
         }
 

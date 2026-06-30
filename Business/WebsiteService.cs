@@ -38,6 +38,7 @@ namespace IttihadmembershipAPI.Business
              authResponse.FullName = user.FullName;
             authResponse.MobileNo = user.MobileNo;
             authResponse.EmailId = user.EmailId;
+            authResponse.MemberShipId = user.MemberShipId;
 
             _AuthenticationModel.SaveRefreshToken(
                 authResponse.MemberId,
@@ -130,9 +131,14 @@ namespace IttihadmembershipAPI.Business
         {
             return _WebsiteModel.PaymentDetails(obj);
         }
+        public List<PaymentDTO> GetUserPaymentDetails(PaymentDTO obj)
+        {
+            return _WebsiteModel.GetUserPaymentDetails(obj);
+        }
+
 
     }
-    
+
     public interface IWebsiteService
     {
         Task<AuthResponseDTO> UserAuthentication(LoginRequestDTO request);
@@ -145,5 +151,6 @@ namespace IttihadmembershipAPI.Business
         CommonDTO ChangePassword(CheckPasswordDTO obj);
 
         PaymentDTO PaymentDetails(PaymentDTO obj);
+        List<PaymentDTO> GetUserPaymentDetails(PaymentDTO obj);
     }
 }

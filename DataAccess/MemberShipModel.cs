@@ -71,6 +71,7 @@ namespace IttihadmembershipAPI.DataAccess
                             Id = Convert.ToInt32(data["MembershipID"]),
                             DurationDays = Convert.ToInt32(data["DurationDays"]),
                             MembershipName = data["MembershipName"]?.ToString(),
+                            Tag = data["Tag"]?.ToString(),
                             Description = data["Description"]?.ToString(),
                             IsActive = Convert.ToBoolean(data["IsActive"]),
                             CreatedBy = Convert.ToInt32(data["CreatedBy"]),

@@ -6,6 +6,7 @@
         public int DurationDays { get; set; } = 0;
         public string MembershipName { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
+        public string Tag { get; set; } = string.Empty;
         
         
        

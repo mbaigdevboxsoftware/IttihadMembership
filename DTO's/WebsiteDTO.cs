@@ -51,6 +51,7 @@
     public class PaymentDTO:CommonDTO
     {
         public int SubscriptionId { get; set; } = 0;
+        public int ID { get; set; } = 0;
 
         public decimal TransactionAmount { get; set; }
         public int FirstDigits { get; set; } = 0;
@@ -60,6 +61,10 @@
         public string CardHolder { get; set; } = string.Empty;
         public string CardBrand { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
+        public string MembershipName { get; set; } = string.Empty;
+        public string Status { get; set; } = string.Empty;
+        public string Date { get; set; } = string.Empty;
+        public string Invoice { get; set; } = string.Empty;
 
     }
 }

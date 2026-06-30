@@ -58,7 +58,8 @@ public class JwtTokenService : IJwtTokenService
         {
             AccessToken = accessToken,
             RefreshToken = refreshToken,
-            ExpiresAt = expiry
+            ExpiresAt = expiry,
+           
         };
     }
 

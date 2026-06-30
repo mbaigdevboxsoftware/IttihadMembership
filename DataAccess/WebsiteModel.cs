@@ -298,6 +298,26 @@ namespace IttihadmembershipAPI.DataAccess
                 };
             }
         }
+        public List<PaymentDTO> GetUserPaymentDetails(PaymentDTO obj)
+        {
+            try
+            {
+                var parameters = new[]
+                {
+            new SqlParameter("@Id", obj.ID)
+        };
+
+                using (var result =
+                    DbConnector.ExecuteReader("[Admin].[GetPaymentDetails]", parameters))
+                {
+                    return CustomDataReaderToGenericExtension.GetDataObjects<PaymentDTO>(result).ToList();
+                }
+            }
+            catch
+            {
+                return new List<PaymentDTO>();
+            }
+        }
     }
     public interface IWebsiteModel
     {
@@ -309,6 +329,7 @@ namespace IttihadmembershipAPI.DataAccess
         List<WebsiteDTO> CheckPassword(CheckPasswordDTO obj);
         PaymentDTO PaymentDetails(PaymentDTO obj);
         CommonDTO ChangePassword(CheckPasswordDTO obj);
+        List<PaymentDTO> GetUserPaymentDetails(PaymentDTO obj);
 
     }
 }
